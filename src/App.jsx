@@ -1,63 +1,37 @@
 import React from "react";
 import "./App.css";
-import Typed from "typed.js";
+import Navbar from "./components/Navbar";
+import Skills from "./components/Skills";
+import Section from "./components/Section";
+import Credentials from "./components/credentials";
 
 export default function MyApp() {
-  const titleEl = React.useRef(null);
-  const oneYearEl = React.useRef(null);
-  const yearsExperienceEl = React.useRef(null);
-  const projectsDoneEl = React.useRef(null);
-  const tenPlusEl = React.useRef(null);
-
-  React.useEffect(() => {
-    // Create reference to store the DOM element containing the animation
-    const title = new Typed(titleEl.current, {
-      strings: ["My name is Keenen", "I'm a...", "Front-end Developer"],
-      typeSpeed: 50,
-      showCursor: false,
-    });
-
-    const oneYear = new Typed(oneYearEl.current, {
-      strings: ["1+"],
-      typeSpeed: 50,
-      startDelay: 5000,
-      showCursor: false,
-    });
-
-    const yearsExperience = new Typed(yearsExperienceEl.current, {
-      strings: ["Years of experience in web development"],
-      typeSpeed: 20,
-      startDelay: 5200,
-      showCursor: false,
-    });
-
-    const projectsDone = new Typed(projectsDoneEl.current, {
-      strings: ["Projects worked on during my career"],
-      typeSpeed: 20,
-      startDelay: 6800,
-      showCursor: false,
-    });
-
-    const tenPlus = new Typed(tenPlusEl.current, {
-      strings: ["10+"],
-      typeSpeed: 20,
-      startDelay: 8200,
-      showCursor: false,
-    });
-
-    return () => {
-      // Destroy Typed instance during cleanup to stop animation
-      title.destroy();
-      yearsExperience.destroy();
-      oneYear.destroy();
-      projectsDone.destroy();
-      tenPlus.destroy();
-    };
-  }, []);
-
   return (
     <>
-      <div className="hero-box">
+      <Section className="kc-hero-gradient flex">
+        <div className="md:bg-white md:w-[65%] h-full">
+          <Navbar />
+          <Credentials />
+        </div>
+        <div className="kc-image md:w-[35%] flex items-end relative">
+          <img
+            className="-ml-[45%] max-h-full"
+            src="/Portfolio-img.png"
+            alt="selfie"
+          />
+          <h1 className="text-white text-7xl rotate-90 absolute -right-52 top-96 md: ">
+            KEENEN&nbsp;<span className="text-slate-700">CRUMMITT</span>
+          </h1>
+        </div>
+      </Section>
+      <Section>
+        <div className="bg-gradient-to-r  from-sky-200 via-sky-100 to bg-white h-full"></div>
+      </Section>
+      {/* <Section></Section>
+      <Section></Section> */}
+
+      {/* <Navbar /> */}
+      {/* <div className="hero-box">
         <div className="hero-background">
           <div className="hero-left"></div>
           <div className="hero-right">
@@ -67,29 +41,13 @@ export default function MyApp() {
           </div>
         </div>
         <div className="hero-content">
-          <div className="credentials">
-            <h2 ref={titleEl}>Front-end Developer</h2>
-            <div className="hire-button">
-              <button>Hire Me</button>
-            </div>
-            <div className="work">
-              <div className="experience">
-                <h3 ref={oneYearEl}>1+</h3>
-                <p ref={yearsExperienceEl}>
-                  Years of experience in web development
-                </p>
-              </div>
-              <div className="projects">
-                <h3 ref={tenPlusEl}>10+</h3>
-                <p ref={projectsDoneEl}>Projects worked on during my career</p>
-              </div>
-            </div>
-          </div>
+          
           <div className="self-image">
-            <img src="/Portfolio-img.png" alt="selfie" />
+            <img className="img1" src="/Portfolio-img.png" alt="selfie" />
           </div>
         </div>
-      </div>
+      </div> */}
+      {/* <Skills /> */}
     </>
   );
 }
