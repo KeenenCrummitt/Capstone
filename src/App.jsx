@@ -8,6 +8,7 @@ import Credentials from "./components/credentials";
 export default function MyApp() {
   return (
     <>
+      {/************************************ Hire Me page  **************************************/}
       <Section className="kc-hero-gradient flex">
         <div className="md:bg-white md:w-[65%] h-full">
           <Navbar />
@@ -24,8 +25,13 @@ export default function MyApp() {
           </h1>
         </div>
       </Section>
+
+      {/************************************ Skills page  **************************************/}
+
       <Section>
-        <div className="bg-gradient-to-r  from-sky-200 via-sky-100 to bg-white h-full"></div>
+        <div className="bg-gradient-to-r  from-sky-200 via-sky-100 to bg-white h-full">
+          <Skills className="skills-container px-5 py-5" />
+        </div>
       </Section>
       {/* <Section></Section>
       <Section></Section> */}
