@@ -11,5 +11,9 @@
 }
 
 .skills-styling h4 {
-    color: black;
+  color: black;
+}
+
+.italic {
+  font-family: italic;
 }
