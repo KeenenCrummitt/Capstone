@@ -1,12 +1,13 @@
 import FigmaIcon from "./icons/figma";
 import JavascriptIcon from "./icons/javascript";
-import PhotoshopIcon from "./icons/photoshop";
 import PremierProIcon from "./icons/premier_pro";
 import ReactIcon from "./icons/react";
 import TailwindIcon from "./icons/tailwind";
-import XDIcon from "./icons/xd";
+import PhotoshopIcon from "./icons/photoshop";
 import SkillCard from "./SkillCard";
 import "./Skills.modules.css";
+
+///////////////////////// Skills Card Function to individually call out icons /////////////////////////////
 
 const Skills = () => {
   return (
@@ -38,8 +39,8 @@ const Skills = () => {
             text="Lorem ipsum dolor sit amet."
           />
           <SkillCard
-            icon={XDIcon}
-            title="Adobe XD"
+            icon={PhotoshopIcon}
+            title="Adobe Photoshop"
             text="Lorem ipsum dolor sit amet."
           />
           <SkillCard

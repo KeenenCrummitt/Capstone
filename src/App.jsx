@@ -4,12 +4,14 @@ import Navbar from "./components/Navbar";
 import Skills from "./components/Skills";
 import Section from "./components/Section";
 import Credentials from "./components/credentials";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
 
 export default function MyApp() {
   return (
     <>
       {/************************************ Hire Me page  **************************************/}
-      <Section className="kc-hero-gradient flex">
+      <Section className="kc-hero-gradient flex" id="Hire">
         <>
           <div className="md:bg-white md:w-[65%] h-full">
             <Navbar />
@@ -30,30 +32,21 @@ export default function MyApp() {
 
       {/************************************ Skills page  **************************************/}
 
-      <Section className="bg-gradient-to-r  from-sky-200 via-sky-100 bg-white h-full">
+      <Section className="bg-blue-100" id="skills">
         <Skills className="skills-container px-5 py-5" />
       </Section>
-      {/* <Section></Section>
-      <Section></Section> */}
 
-      {/* <Navbar /> */}
-      {/* <div className="hero-box">
-        <div className="hero-background">
-          <div className="hero-left"></div>
-          <div className="hero-right">
-            <h1 className="keenen">
-              KEENEN <span className="crummitt">CRUMMITT</span>
-            </h1>
-          </div>
-        </div>
-        <div className="hero-content">
-          
-          <div className="self-image">
-            <img className="img1" src="/Portfolio-img.png" alt="selfie" />
-          </div>
-        </div>
-      </div> */}
-      {/* <Skills /> */}
+      {/************************************ Projects page  **************************************/}
+
+      <Section class="bg-white" id="projects">
+        <Projects />
+      </Section>
+
+      {/************************************ Contact page  **************************************/}
+
+      <Section className="bg-indigo-900">
+        <Contact />
+      </Section>
     </>
   );
 }

@@ -8,7 +8,9 @@ const SkillCard = ({ icon, title, text }) => {
         <h6 className="pl-10 text-xl text-slate-600">{title}</h6>
         <p className="italic text-sm pl-10 text-slate-400">{text}</p>
       </div>
-      <p className="absolute text-slate-500 right-4 top-0">&#x279E;</p>
+      <p className="absolute text-slate-500 right-4 top-0 group-hover:scale-105">
+        &#x279E;
+      </p>
     </div>
   );
 };
