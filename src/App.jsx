@@ -6,6 +6,7 @@ import Section from "./components/Section";
 import Credentials from "./components/credentials";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
+import About from "./components/About";
 
 export default function MyApp() {
   return (
@@ -28,6 +29,12 @@ export default function MyApp() {
             </h1>
           </div>
         </>
+      </Section>
+
+      {/************************************ About page  **************************************/}
+
+      <Section className="bg-indigo-900 text-white text-7xl pl-10 pt-10">
+        <About />
       </Section>
 
       {/************************************ Skills page  **************************************/}
