@@ -11,13 +11,13 @@ import "./Skills.modules.css";
 
 const Skills = () => {
   return (
-    <div className="skills-container container px-5 py-14 mx-auto">
-      <div className="skills-styling text-3xl">
+    <div className="skills-container container px-5 py-14 mx-auto" id="skills">
+      <div className="skills-styling text-3xl min-h-100vh">
         <h2>Skills</h2>
         <h4 className="top-skills-title text-gray-400 ">My Top Skills</h4>
         <br />
 
-        <div className="skills-icons flex flex-wrap gap-4 justify-center">
+        <div className="skills-icons flex flex-wrap gap-4 justify-center overflow-auto max-h-[100vh]">
           <SkillCard
             icon={ReactIcon}
             title="React.js"

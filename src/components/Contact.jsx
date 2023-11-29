@@ -1,7 +1,7 @@
 const Contact = () => {
   return (
     <>
-      <div className="md:container px-10 py-14">
+      <div className="md:container px-10 py-14" id="contact">
         <h4 className="subtitle text-opacity-1 text-white text-3xl">
           Contact Me
         </h4>
@@ -27,7 +27,7 @@ const Contact = () => {
             className="border border-slate-600 p-3 rounded h-44"
             required
           ></textarea>
-          <button className="btn self-start bg-white text-dark_primary">
+          <button className="hire-button-1 btn self-start bg-white text-dark_primary">
             Submit
           </button>
         </form>

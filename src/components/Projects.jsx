@@ -1,8 +1,21 @@
+import Modal from "./Modal";
 import Carousel from "./ui/carousel";
+import { useState } from "react";
 
 const Projects = () => {
+  const [modalImage, setModalImage] = useState();
+  const [openModal, setOpenModal] = useState();
+
+  function openImageModal(url) {
+    setModalImage(url);
+    setOpenModal();
+  }
+
   return (
-    <div className="md:container min-h-screen flex flex-col justify between">
+    <div
+      className="md:container min-h-screen flex flex-col justify between"
+      id="projects"
+    >
       <div className="text-3xl pl-10 mt-7">
         <h2>Projects</h2>
         <h4>Creations</h4>
@@ -16,30 +29,23 @@ const Projects = () => {
             className="max-h-screen inline-block"
           />
         </div>
+        <div id="imageGrid">
+          <img
+            src="some/image-crop.png"
+            alt="some text"
+            onClick={() => openImageModal("some/image-full.png")}
+          />
+        </div>
+        {openModal && <Modal src={modalImage} />}
         <Carousel>
           <div className="w-96 h-52">
-            <img
-              key="1"
-              src="/public/GradApp.png"
-              alt="Graduation App"
-              className="h-full w-full object-cover"
-            />
+            <Modal fullImage="" cropImage="/public/GradApp.png" />
           </div>
           <div className="w-96 h-52">
-            <img
-              key="2"
-              src="/public/Home-Page-5.png"
-              alt="Plumber-Tom Homepage"
-              className="h-full w-full object-cover"
-            />
+            <Modal fullImage="" cropImage="/public/Home-Page-5.png" />
           </div>
           <div className="w-96 h-52">
-            <img
-              key="6"
-              src="/public/ParkPage.png"
-              alt="YellowStone Homepage 1"
-              className="h-full w-full object-cover"
-            />
+            <Modal fullImage="" cropImage="/public/ParkPage.png" />
           </div>
         </Carousel>
       </div>

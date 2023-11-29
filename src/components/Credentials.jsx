@@ -56,7 +56,7 @@ const Credentials = () => {
   }, []);
 
   return (
-    <div className="credentials">
+    <div className="">
       <h2 ref={titleEl}>Front-end Developer</h2>
       <button className="hire-button">Hire Me</button>
       <div className="work">
