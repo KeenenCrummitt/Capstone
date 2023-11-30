@@ -7,7 +7,7 @@ import Credentials from "./components/credentials";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import About from "./components/About";
-import Modal from "./components/Modal";
+import Footer from "./components/footer";
 
 export default function MyApp() {
   return (
@@ -49,9 +49,10 @@ export default function MyApp() {
         <Projects />
       </Section>
       {/************************************ Contact page  **************************************/}
-      <Section className="bg-indigo-900" id="hire-btn">
+      <div className="bg-indigo-900 z-10" id="hire-btn">
         <Contact />
-      </Section>
+        <Footer />
+      </div>
     </>
   );
 }

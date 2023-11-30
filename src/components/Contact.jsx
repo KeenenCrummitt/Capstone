@@ -1,28 +1,34 @@
 import Youtube from "./icons/youtube.jsx";
 import Linkedin from "./icons/linkedin.jsx";
-import Email from "./icons/email.jsx";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import Github from "./icons/github";
 
 const Contact = () => {
   const form = useRef();
+  const nameRef = useRef();
+  const emailRef = useRef();
+  const messageRef = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs
       .sendForm(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
+        "service_d3kqebg",
+        "template_ctze3qm",
         form.current,
-        "YOUR_PUBLIC_KEY"
+        "uz1XDiFCFlq2Aifdi"
       )
       .then(
-        (result) => {
-          console.log(result.text);
+        () => {
+          nameRef.current.value = "";
+          emailRef.current.value = "";
+          messageRef.current.value = "";
+          alert("Your message was sent!");
         },
-        (error) => {
-          console.log(error.text);
+        () => {
+          alert("Could not send message! Try Again.");
         }
       );
   };
@@ -43,6 +49,7 @@ const Contact = () => {
             onSubmit={sendEmail}
           >
             <input
+              ref={nameRef}
               type="text"
               name="from_name"
               placeholder="Name"
@@ -50,13 +57,15 @@ const Contact = () => {
               className="border border-slate-600 p-3 rounded"
             />
             <input
+              ref={emailRef}
               type="email"
-              name="user_email"
+              name="from_email"
               placeholder="Email"
               required
               className="border border-slate-600 p-3 rounded"
             />
             <textarea
+              ref={messageRef}
               name="message"
               placeholder="Message"
               className="border border-slate-600 p-3 rounded h-44"
@@ -72,13 +81,15 @@ const Contact = () => {
           <div className="e-mail  gap-2">
             <div className="flex items-center gap-2">
               <h4 className="text-white fill-white">
-                <Email />
+                <Github />
               </h4>
               <a
                 className="font-Poppins"
-                href="mailto:keenencrummitt@gmail.com"
+                href="https://github.com/KeenenCrummitt"
+                target="_blank"
+                rel="noreferrer"
               >
-                keenencrummitt@gmail.com
+                Github
               </a>
             </div>
           </div>

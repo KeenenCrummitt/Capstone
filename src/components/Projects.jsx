@@ -16,7 +16,7 @@ const Projects = () => {
           <img
             src="/public/Keenen_Fist.png"
             alt="Keenen's Fist"
-            className="max-h-screen inline-block"
+            className="max-h-screen relative inline-block -z-10"
           />
         </div>
 
