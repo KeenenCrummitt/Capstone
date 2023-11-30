@@ -35,7 +35,7 @@ const About = () => {
       <div className="md:w-[100%] flex flex-col items-end relative mt-auto sm:w-2">
         <img
           className="ml-auto max-h-full flex-bottom"
-          src="/public/logo-image-start.png"
+          src="/logo-image-start.png"
           alt="selfie"
         />
       </div>

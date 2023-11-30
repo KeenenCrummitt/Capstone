@@ -14,7 +14,7 @@ const Projects = () => {
       <div className="flex relative items-center justify-center lg:flex-row flex-col-reverse gap-5">
         <div className="max-h-screen">
           <img
-            src="/public/Keenen_Fist.png"
+            src="/Keenen_Fist.png"
             alt="Keenen's Fist"
             className="max-h-screen relative inline-block -z-10"
           />
@@ -22,20 +22,20 @@ const Projects = () => {
 
         <div className="flex flex-wrap gap-5 justify-center">
           <Modal
-            fullImage="/public/full-images/GradApp.png"
-            cropImage="/public/cropimages/GradApp.png"
+            fullImage="/full-images/GradApp.png"
+            cropImage="/cropimages/GradApp.png"
             text="Graduation App"
           />
 
           <Modal
-            fullImage="/public/full-images/tom-home.png"
-            cropImage="/public/cropimages/tom-home.png"
+            fullImage="/full-images/tom-home.png"
+            cropImage="/cropimages/tom-home.png"
             text="Plumber-Tom Homepage"
           />
 
           <Modal
-            fullImage="/public/full-images/national-park-home.png"
-            cropImage="/public/cropimages/national-park-page.png"
+            fullImage="/full-images/national-park-home.png"
+            cropImage="/cropimages/national-park-page.png"
             text="National Park Homepage"
           />
         </div>
