@@ -1,9 +1,8 @@
-import React from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import Skills from "./components/Skills";
 import Section from "./components/Section";
-import Credentials from "./components/credentials";
+import Credentials from "./components/Credentials";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import About from "./components/About";
