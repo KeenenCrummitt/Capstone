@@ -49,7 +49,7 @@ export default function MyApp() {
         <Projects />
       </Section>
       {/************************************ Contact page  **************************************/}
-      <Section className="bg-indigo-900">
+      <Section className="bg-indigo-900" id="hire-btn">
         <Contact />
       </Section>
     </>

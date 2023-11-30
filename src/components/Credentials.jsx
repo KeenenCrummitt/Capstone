@@ -58,7 +58,9 @@ const Credentials = () => {
   return (
     <div className="">
       <h2 ref={titleEl}>Front-end Developer</h2>
-      <button className="hire-button">Hire Me</button>
+      <a href="#contact">
+        <button className="hire-button">Hire Me</button>
+      </a>
       <div className="work">
         <div className="experience">
           <h3 ref={oneYearEl}>1+</h3>

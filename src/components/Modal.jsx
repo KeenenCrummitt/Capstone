@@ -1,26 +1,33 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 
-const Modal = ({ fullImage, cropImage }) => {
+const Modal = ({ fullImage, cropImage, text }) => {
   const [showModal, setShowModal] = useState();
+
+  const handleBackgroundClick = () => {
+    setShowModal(false);
+  };
   return (
     <>
       <button
-        className="bg-pink-500 text-white active:bg-pink-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+        className="shadow-lg rounded-lg overflow-hidden"
         type="button"
         onClick={() => setShowModal(true)}
       >
-        Open regular modal
+        <img className="object-contain w-48" src={cropImage} alt={text} />
       </button>
       {/* A modal was created to show the full size of each picture that the carousel could not */}
       {showModal ? (
-        <>
+        <div
+          onClick={handleBackgroundClick}
+          className="top-0 left-0 fixed w-screen h-screen z-[100] bg-black/50 flex items-center justify-center"
+        >
           <img
             src={fullImage}
-            alt="Graduation App"
+            alt={text}
             className="max-h-screen inline-block"
           />
-        </>
+        </div>
       ) : null}
     </>
   );
@@ -29,6 +36,7 @@ const Modal = ({ fullImage, cropImage }) => {
 Modal.propTypes = {
   fullImage: PropTypes.string.isRequired,
   cropImage: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
 };
 
 export default Modal;

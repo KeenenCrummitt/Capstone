@@ -1,19 +1,9 @@
 import Modal from "./Modal";
-import Carousel from "./ui/carousel";
-import { useState } from "react";
 
 const Projects = () => {
-  const [modalImage, setModalImage] = useState();
-  const [openModal, setOpenModal] = useState();
-
-  function openImageModal(url) {
-    setModalImage(url);
-    setOpenModal();
-  }
-
   return (
     <div
-      className="md:container min-h-screen flex flex-col justify between"
+      className="min-h-screen flex flex-col w-full justify between"
       id="projects"
     >
       <div className="text-3xl pl-10 mt-7">
@@ -29,25 +19,26 @@ const Projects = () => {
             className="max-h-screen inline-block"
           />
         </div>
-        <div id="imageGrid">
-          <img
-            src="some/image-crop.png"
-            alt="some text"
-            onClick={() => openImageModal("some/image-full.png")}
+
+        <div className="flex flex-wrap gap-5 justify-center">
+          <Modal
+            fullImage="/public/full-images/GradApp.png"
+            cropImage="/public/cropimages/GradApp.png"
+            text="Graduation App"
+          />
+
+          <Modal
+            fullImage="/public/full-images/tom-home.png"
+            cropImage="/public/cropimages/tom-home.png"
+            text="Plumber-Tom Homepage"
+          />
+
+          <Modal
+            fullImage="/public/full-images/national-park-home.png"
+            cropImage="/public/cropimages/national-park-page.png"
+            text="National Park Homepage"
           />
         </div>
-        {openModal && <Modal src={modalImage} />}
-        <Carousel>
-          <div className="w-96 h-52">
-            <Modal fullImage="" cropImage="/public/GradApp.png" />
-          </div>
-          <div className="w-96 h-52">
-            <Modal fullImage="" cropImage="/public/Home-Page-5.png" />
-          </div>
-          <div className="w-96 h-52">
-            <Modal fullImage="" cropImage="/public/ParkPage.png" />
-          </div>
-        </Carousel>
       </div>
     </div>
   );
