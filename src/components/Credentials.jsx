@@ -62,7 +62,7 @@ const Credentials = () => {
 
   return (
     <div className="">
-      <h2 ref={titleEl}>Front-end Developer</h2>
+      <h2 ref={titleEl}>UX UI Designer</h2>
       <a href="#contact">
         <button className="hire-button">Hire Me</button>
       </a>
