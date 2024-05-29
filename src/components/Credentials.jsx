@@ -12,18 +12,13 @@ const Credentials = () => {
   React.useEffect(() => {
     // Create reference to store the DOM element containing the animation
     const title = new Typed(titleEl.current, {
-      strings: [
-        "My name is Keenen",
-        "I'm a...",
-        "UX UI Designer",
-        "Front-end Developer",
-      ],
+      strings: ["My name is Keenen", "I'm a...", "UX UI Designer"],
       typeSpeed: 50,
       showCursor: false,
     });
 
     const oneYear = new Typed(oneYearEl.current, {
-      strings: ["1+"],
+      strings: ["2+"],
       typeSpeed: 50,
       startDelay: 5000,
       showCursor: false,
@@ -68,7 +63,7 @@ const Credentials = () => {
       </a>
       <div className="work">
         <div className="experience">
-          <h3 ref={oneYearEl}>1+</h3>
+          <h3 ref={oneYearEl}>2+</h3>
           <p ref={yearsExperienceEl}>Years of experience in web development</p>
         </div>
         <div className="projects">
