@@ -12,7 +12,12 @@ const Credentials = () => {
   React.useEffect(() => {
     // Create reference to store the DOM element containing the animation
     const title = new Typed(titleEl.current, {
-      strings: ["My name is Keenen", "I'm a...", "UX UI Designer"],
+      strings: [
+        "My name is Keenen",
+        "I'm a...",
+        "Frontend Developer",
+        "UX UI Designer",
+      ],
       typeSpeed: 50,
       showCursor: false,
     });
